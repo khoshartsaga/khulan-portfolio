@@ -1,0 +1,456 @@
+/* body*/
+body{
+  font-family: 'Comfortaa';
+  font-size: 18px;
+  color: #353535;
+  line-height: 24px;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 8px;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+h4{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+bold{
+  font-weight: 700;
+}
+
+
+/*----------navigation bar----------------------------------------------------*/
+.topnav{
+  background-color: rgba(255, 245, 245, 0.9);
+  padding: 16px 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.kh-logo img{
+  width: 85px;
+  height: 60px;
+}
+
+.compass{
+  display:flex;
+  background-image: url("assets/nav-img/compass-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.compass img{
+  width: 14px;
+  height: 38px;
+  transform: rotate(30deg);
+  animation:spin-back .5s linear;
+}
+
+.compass:hover img{
+  animation:spin .5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin-back {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform:rotate(-360deg);
+    }
+}
+
+#hidden-pages{
+  display: none;
+}
+
+
+/*----------hero section------------------------------------------------------*/
+.hero-section{
+  background-color: rgba(255, 245, 245);
+  padding-top: 48px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.hero-image{
+  width: 30%;
+}
+
+.hero-image img{
+  width: 100%;
+  height: auto;
+}
+
+.hero-desc{
+  width: 65%
+}
+
+.hyperlink{
+  color:#EF758A;
+}
+
+.hyperlink:hover{
+  background-color: #E2ACB5;
+  color: #fff;
+}
+
+button{
+  background-color: #3A7671;
+  color: #fff;
+  border-color: #3A7671;
+  border: 6px solid #3A7671;
+  border-radius: 16px;
+  padding: 16px 24px 16px;
+  font-family: 'Comfortaa';
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+button:hover{
+  background-image: linear-gradient(
+    45deg,
+    rgba(68, 125, 120)  25%,
+    transparent       25%,
+    transparent       50%,
+    rgba(68, 125, 120)  50%,
+    rgba(68, 125, 120)  75%,
+    transparent       75%,
+    transparent
+  );
+  border-color: #80ACA9;
+  border: 6px solid #80ACA9;
+  transition: opacity 0.3s ease;
+  animation: barberpole 1.5s linear infinite;
+  background-size: 30px 30px;
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 30px;
+  }
+}
+
+
+
+/*----------green triangle divider--------------------------------------------*/
+.green-triangle-divider{
+  background-color: rgba(255, 245, 245);
+  padding-left: 30%;
+  padding-right: 30%;
+  display: flex;
+  width: 40%
+}
+
+.green-triangle-divider img{
+  width: 100%;
+  height: 100%
+}
+
+
+/*----------works and projects------------------------------------------------*/
+.recent-projects-section{
+  background-color: rgba(255, 245, 245);
+  padding-top: 64px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.project {
+  transition: all .2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.1);
+}
+
+.project{
+   background-color: #fff;
+   border-radius: 50px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.thumbtack{
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover-img{
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.cdm-project-image{
+  background-image: url("assets/Projects/core-digital-media/cdm-bg.png");
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 320px;
+  padding: 4px 32px 0px;
+  overflow:hidden;
+}
+
+.icc-project-image{
+  background-image: url("assets/Projects/in-creative-co/icc-bg.png");
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 320px;
+  padding: 4px 32px 0px;
+  overflow:hidden;
+}
+
+.academic-project-image{
+  background-image: url("assets/Projects/netflix-academic/academic-bg.png");
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 320px;
+  padding: 4px 32px 0px;
+  overflow:hidden;
+}
+
+.project-logo{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  margin-top: -30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-description{
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.carousel {
+  display: none;
+}
+
+
+/*----------footer------------------------------------------------------------*/
+.footer{
+  background-image: url("assets/home-img/footer-bg.png");
+  padding-top: 64px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 64px;
+  width: 70%;
+}
+
+.footer-links{
+  padding: 24px 0px 24px;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  transition: all .2s ease-in-out;
+  margin-right: 20px;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/*----------for screen sizes less than 720 pixels-----------------------------*/
+@media only screen and (max-width: 720px) {
+  /*----------navigation bar--------------------------------------------------*/
+  .topnav{
+    padding: 8px 20px 8px;
+  }
+
+
+  /*----------hero section----------------------------------------------------*/
+  .hero-section{
+    padding-top: 32px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .hero-image{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 16px;
+  }
+
+  .hero-desc{
+    width:100%
+  }
+
+
+  /*----------green triangle divider------------------------------------------*/
+  .green-triangle-divider{
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    width: 70%
+  }
+
+  /*----------Recent Projects Section Desktop---------------------------------*/
+  .recent-projects-section {
+  display: none;
+  }
+
+
+  /*----------Recent Projects Section Tablet----------------------------------*/
+  .carousel {
+    display: block;
+    background-color: rgba(255, 245, 245);
+    max-width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    height: auto;
+  }
+
+  .project{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .flickity-viewport{
+    padding: 10px;
+  }
+
+  .flickity-page-dots{
+    position: relative;
+  }
+
+  .flickity-button-icon{
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*----------for screen sizes less than 480 pixels-----------------------------*/
+@media only screen and (max-width: 480px) {
+    /*----------hero section--------------------------------------------------*/
+    .hero-section{
+      padding-top: 32px;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .hero-image{
+      width: 65%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 16px;
+    }
+
+    .hero-desc{
+      width:100%
+    }
+
+
+    /*----------green triangle divider----------------------------------------*/
+    .green-triangle-divider{
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      width: 90%
+    }
+
+
+    /*----------Recent Projects Section Mobile--------------------------------*/
+    .carousel {
+      max-width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .project{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /*----------Footer--------------------------------------------------------*/
+    .footer{
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 90%;
+    }
+
+}
