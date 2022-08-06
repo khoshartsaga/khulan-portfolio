@@ -123,7 +123,8 @@ bold{
   color: #fff;
 }
 
-button{
+.about-me-button{
+  position: relative;
   background-color: #3A7671;
   color: #fff;
   border-color: #3A7671;
@@ -134,9 +135,10 @@ button{
   font-size: 16px;
   font-weight: 700;
   margin-top: 24px;
+  z-index: 2;
 }
 
-button:hover{
+.about-me-button:hover{
   background-image: linear-gradient(
     45deg,
     rgba(68, 125, 120)  25%,
@@ -161,6 +163,149 @@ button:hover{
   to {
     background-position: 60px 30px;
   }
+}
+
+#about-me-container {
+  position:relative;
+}
+
+
+.left-top-leaf {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  width: 17px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .left-top-leaf{
+  animation: left-top-leaf-initial 1s, left-top-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes left-top-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(-30px,-5px); }
+}
+
+@keyframes left-top-leaf-loop {
+  0% { transform: translate(-30px,-5px); }
+  50% { transform: translate(-22px, -4px); }
+  100% { transform: translate(-30px,-5px); }
+}
+
+.left-mid-leaf {
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  width: 22px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .left-mid-leaf{
+  animation: left-mid-leaf-initial 1s, left-mid-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes left-mid-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(-34px,0px); }
+}
+
+@keyframes left-mid-leaf-loop {
+  0% { transform: translate(-34px,-0px); }
+  50% { transform: translate(-26px, 0px); }
+  100% { transform: translate(-34px,0px); }
+}
+
+.left-bot-leaf {
+  position: absolute;
+  top: 70px;
+  left: 5px;
+  width: 17px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .left-bot-leaf{
+  animation: left-bot-leaf-initial 1s, left-bot-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes left-bot-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(-30px,5px); }
+}
+
+@keyframes left-bot-leaf-loop {
+  0% { transform: translate(-30px,5px); }
+  50% { transform: translate(-22px,4px); }
+  100% { transform: translate(-30px,5px); }
+}
+
+.right-top-leaf {
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  width: 17px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .right-top-leaf{
+  animation: right-top-leaf-initial 1s, right-top-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes right-top-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(30px,-5px); }
+}
+
+@keyframes right-top-leaf-loop {
+  0% { transform: translate(30px,-5px); }
+  50% { transform: translate(22px,-4px); }
+  100% { transform: translate(30px,-5px); }
+}
+
+.right-mid-leaf {
+  position: absolute;
+  top: 50px;
+  left: 220px;
+  width: 22px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .right-mid-leaf{
+  animation: right-mid-leaf-initial 1s, right-mid-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes right-mid-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(32px,0px); }
+}
+
+@keyframes right-mid-leaf-loop {
+  0% { transform: translate(32px,0px); }
+  50% { transform: translate(24px,0px); }
+  100% { transform: translate(32px,0px); }
+}
+
+.right-bot-leaf {
+  position: absolute;
+  top: 70px;
+  left: 220px;
+  width: 17px;
+  height: auto;
+}
+
+.about-me-button:hover ~ .right-bot-leaf{
+  animation: right-bot-leaf-initial 1s, right-bot-leaf-loop 1s linear 1s infinite;
+}
+
+@keyframes right-bot-leaf-initial {
+  0% { transform: translate(0px,0px); }
+  100% { transform: translate(30px,5px); }
+}
+
+@keyframes right-bot-leaf-loop {
+  0% { transform: translate(30px, 5px); }
+  50% { transform: translate(22px,4px); }
+  100% { transform: translate(30px,5px); }
 }
 
 
