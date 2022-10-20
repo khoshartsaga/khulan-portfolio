@@ -20,6 +20,13 @@ h2{
   margin-bottom: 8px;
 }
 
+h3{
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
 h4{
   font-weight: 700;
   font-size: 22px;
@@ -39,7 +46,7 @@ bold{
   justify-content: space-between;
   position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .kh-logo img{
@@ -85,9 +92,92 @@ bold{
 }
 
 #hidden-pages{
-  display: none;
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(140,140,140,0.5); /* Black background with opacity */
+  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 
+.navigation{
+  position: fixed;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 40px;
+  background-color: #FFF9E6;
+  padding: 32px;
+}
+
+.exit-nav{
+  background-color: #786A50;
+  width: 32px;
+  height: 32px;
+  border-radius: 48px;
+  border: 0 solid transparent;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+.navsystem{
+  display:flex;
+  color: #A09582;
+  justify-content: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.navheadline{
+  text-align: center;
+  color: #786A50;
+}
+
+.navitems{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-rows: repeat(3,120px);
+  grid-template-columns: repeat(3,90px);
+  justify-content: center;
+  justify-items: stretch;
+  align-content: center;
+  align-items: stretch;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.navbutton{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Comfortaa';
+  font-size: 18px;
+  line-height: 24px;
+  transition: all .2s ease-in-out;
+}
+
+.navbutton a {
+  text-decoration: none;
+  color: #353535;
+}
+
+.navbutton:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+
+}
 
 /*----------hero section------------------------------------------------------*/
 .hero-section{
@@ -464,6 +554,30 @@ bold{
     padding: 8px 20px 8px;
   }
 
+  /*----------navigation section--------------------------------------------------*/
+  .navigation{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #f7f4e6;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: menu-open .15s ease-in-out 1 forwards;
+    padding: 30px;
+    z-index: 999;
+    border-radius: 0;
+  }
+
+  .exit-nav{
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
+
+  .navsystem{
+    padding-top: 16px;
+  }
 
   /*----------hero section----------------------------------------------------*/
   .hero-section{
@@ -527,11 +641,36 @@ bold{
 
   .flickity-page-dots{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .flickity-button-icon{
-
+  .flickity-prev-next-button.next{
+    background: #0BBAAB;
+    color: #fff;
   }
+
+  .flickity-prev-next-button.previous{
+    background: #0BBAAB;
+    color: #fff;
+  }
+
+
+  .flickity-page-dots .dot {
+    height: 16px;
+    width: 16px;
+    background-color: #CCCCCC;
+    opacity: 100%;
+  }
+
+  .flickity-page-dots .dot.is-selected{
+    border-style: solid;
+    border-color: #7CC9C3;
+    border-width: 4px;
+    background-color: #CCCCCC;
+  }
+
 }
 
 
@@ -545,6 +684,7 @@ bold{
 
 /*----------for screen sizes less than 480 pixels-----------------------------*/
 @media only screen and (max-width: 480px) {
+
     /*----------hero section--------------------------------------------------*/
     .hero-section{
       padding-top: 32px;
